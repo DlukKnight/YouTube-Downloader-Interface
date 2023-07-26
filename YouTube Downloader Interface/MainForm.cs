@@ -1,6 +1,7 @@
 using Microsoft.Web.WebView2.Core;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using YouTube_Downloader_Interface.Properties;
 
 namespace YouTube_Downloader_Interface
 {
@@ -50,7 +51,9 @@ namespace YouTube_Downloader_Interface
         private void YouTubeWebBrowser_SourceChanged(object? sender, CoreWebView2SourceChangedEventArgs e)
         {
             backNavButton.Enabled = youTubeWebBrowser.CanGoBack;
+            backNavButton.BackgroundImage = backNavButton.Enabled ? Resources.arrow_left : Resources.arrow_left_disabled;
             forwardNavButton.Enabled = youTubeWebBrowser.CanGoForward;
+            forwardNavButton.BackgroundImage = forwardNavButton.Enabled ? Resources.arrow_right : Resources.arrow_right_disabled;
             txtURL.Text = youTubeWebBrowser.Source.ToString();
         }
 

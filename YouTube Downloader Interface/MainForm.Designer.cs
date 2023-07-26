@@ -120,6 +120,7 @@
             btnDownload.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnDownload.BackColor = SystemColors.Control;
             btnDownload.BackgroundImageLayout = ImageLayout.Zoom;
+            btnDownload.Enabled = false;
             btnDownload.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnDownload.ForeColor = Color.Black;
             btnDownload.Image = Properties.Resources.Download;
@@ -197,8 +198,9 @@
             // 
             // forwardNavButton
             // 
-            forwardNavButton.BackgroundImage = Properties.Resources.arrow_right;
+            forwardNavButton.BackgroundImage = Properties.Resources.arrow_right_disabled;
             forwardNavButton.BackgroundImageLayout = ImageLayout.Stretch;
+            forwardNavButton.Enabled = false;
             forwardNavButton.Location = new Point(62, 12);
             forwardNavButton.Name = "forwardNavButton";
             forwardNavButton.Size = new Size(50, 50);
@@ -208,8 +210,9 @@
             // 
             // backNavButton
             // 
-            backNavButton.BackgroundImage = Properties.Resources.arrow_left;
+            backNavButton.BackgroundImage = Properties.Resources.arrow_left_disabled;
             backNavButton.BackgroundImageLayout = ImageLayout.Stretch;
+            backNavButton.Enabled = false;
             backNavButton.Location = new Point(7, 12);
             backNavButton.Name = "backNavButton";
             backNavButton.Size = new Size(50, 50);
